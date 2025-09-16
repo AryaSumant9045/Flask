@@ -1,0 +1,21 @@
+\index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINJA in Flask-Class XI marks</title>
+</head>
+<body>
+    <h1>Students Marks</h1>
+    {#This is a comment in jinja #}
+    <ul>
+    {% for key in marks.keys() %}
+        <li>The marks of {{key}} is {{marks.get(key)}}</li>
+        {% if marks.get(key) > 90 %}
+            <span>good</span>     
+        {% endif %}
+    {% endfor %}
+    </ul>
+</body>
+</html>
